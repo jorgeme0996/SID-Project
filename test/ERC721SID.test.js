@@ -18,7 +18,7 @@ describe("ERC721 SID", () => {
 
   describe("safeMint", () => {
     it("Should mint token", async () => {
-        const addresToSend = account1.address
+        const addresToSend = account1.address;
         await ERC721SIDContract.safeMint(addresToSend)
         expect(await ERC721SIDContract.ownerOf(0)).to.equal(addresToSend)
     })
